@@ -2,7 +2,7 @@
 这是一个绿色U8登录模块,用于快速拿到登录token,绕过login的限制.  
 
 ```csharp
-var miniLogin=new  	MU8login("192.168.1.2", 	//服务器地址  
+var mLogin=new  	MU8login("192.168.1.2", 	//服务器地址  
 				 "demo", 		//用户名  
 				 "DEMO",		//密码  
 				 "2020-01-01", 		//登录日期  
@@ -14,13 +14,13 @@ foreach (var e in ret)
 	    Console.WriteLine($"   {e}");
 	}
 //然后  
-miniLogin.Login();
+mLogin.Login();
 //登陆成功后,会获取到token信息,该信息可以帮助你构建u8login对象,当然要初始化U8login就需要环境里面安装用友客户端了
 //我们的本意是绿色环境,所以初始化U8login代码,仅供参考 
-var token = miniLogin.TOKEN;
+var token = mLogin.TOKEN;
 if (token == null)
 	{
-	    Console.WriteLine(@"登录失败:{0}", mlogin.LastLoginErr);
+	    Console.WriteLine(@"登录失败:{0}", mLogin.LastLoginErr);
 	    return;
 	}
 //构建U8login对象		
